@@ -13,8 +13,8 @@ if (!databaseUri) {
 var pushConfig = {};
 
 if (process.env.GCM_SENDER_ID && process.env.GCM_API_KEY) {
-    pushConfig['android'] = { senderId: process.env.GCM_SENDER_ID || '',
-                              apiKey: process.env.GCM_API_KEY || ''};
+    pushConfig['android'] = { senderId: process.env.GCM_SENDER_ID || '732747127956',
+                              apiKey: process.env.GCM_API_KEY || 'AIzaSyAxLSfswnaLfpdhIjPbHaBpWS8IScWl9W4'};
 }
 
 if (process.env.APNS_ENABLE) {
@@ -42,11 +42,11 @@ if (process.env.S3_ENABLE) {
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
+  appId: process.env.APP_ID || 'tradego',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   push: pushConfig,
   filesAdapter: filesAdapter,
-  serverURL: process.env.SERVER_URL || 'http://localhost/parse'  // needed for Parse Cloud and push notifications
+  serverURL: process.env.SERVER_URL || 'http://tradego.herokuapp.com/parse'  // needed for Parse Cloud and push notifications
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
