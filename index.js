@@ -60,7 +60,7 @@ app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function(req, res) {
-  res.status(200).send('Is this working');
+  res.status(200).send('Another test to see if the server is working');
 });
 
 var port = process.env.PORT || 1337;
