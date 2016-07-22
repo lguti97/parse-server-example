@@ -40,13 +40,13 @@ if (process.env.S3_ENABLE) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://heroku_74zfccq8:ca9l3lh8f10qaemts61n2m08sl@ds027145.mlab.com:27145/heroku_74zfccq8',
+  databaseURI: databaseUri || 'mongodb://heroku_hpq24g2f:akjhk3bkmuj9parn91id2r13dk@ds043982.mlab.com:43982/heroku_hpq24g2f',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'tradego',
-  masterKey: process.env.MASTER_KEY || '204551741', //Add your master key here. Keep it secret!
+  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   push: pushConfig,
   filesAdapter: filesAdapter,
-  serverURL: process.env.SERVER_URL || 'https://pushexampletradego.herokuapp.com/parse/'  // needed for Parse Cloud and push notifications
+  serverURL: process.env.SERVER_URL || 'https://tradego.herokuapp.com/parse/'  // needed for Parse Cloud and push notifications
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
