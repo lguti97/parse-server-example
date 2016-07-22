@@ -40,7 +40,7 @@ if (process.env.S3_ENABLE) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_74zfccq8:ca9l3lh8f10qaemts61n2m08sl@ds027145.mlab.com:27145/heroku_74zfccq8',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'tradego',
   masterKey: process.env.MASTER_KEY || '204551741', //Add your master key here. Keep it secret!
